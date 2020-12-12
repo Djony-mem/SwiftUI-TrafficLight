@@ -7,17 +7,17 @@
 
 import SwiftUI
 
-struct Button: View {
-    let text: String
-    
+struct ButtonStyle: View {
+    var text: String
+     
     var body: some View {
         ZStack {
             Color(.white)
-                .frame(width: 154, height: 64)
-                .cornerRadius(10)
+                .frame(width: 160, height: 70)
+                .cornerRadius(40)
             Color(.blue)
                 .frame(width: 150, height: 60)
-                .cornerRadius(15)
+                .cornerRadius(40)
             Text(text)
                 .textCase(.uppercase)
                 .foregroundColor(.white)
@@ -28,6 +28,6 @@ struct Button: View {
 
 struct Button_Previews: PreviewProvider {
     static var previews: some View {
-        Button(text: "start")
+        ButtonStyle(text: "start")
     }
 }

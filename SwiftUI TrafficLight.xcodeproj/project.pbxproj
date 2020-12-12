@@ -12,7 +12,7 @@
 		76D8D0AD25828C2900EAE989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76D8D0AC25828C2900EAE989 /* Assets.xcassets */; };
 		76D8D0B025828C2900EAE989 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76D8D0AF25828C2900EAE989 /* Preview Assets.xcassets */; };
 		76D8D0B925828E1900EAE989 /* ColorCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8D0B825828E1500EAE989 /* ColorCircle.swift */; };
-		76D8D0C02582C16100EAE989 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8D0BF2582C16100EAE989 /* Button.swift */; };
+		76D8D0C02582C16100EAE989 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D8D0BF2582C16100EAE989 /* ButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		76D8D0AF25828C2900EAE989 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		76D8D0B125828C2900EAE989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76D8D0B825828E1500EAE989 /* ColorCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircle.swift; sourceTree = "<group>"; };
-		76D8D0BF2582C16100EAE989 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		76D8D0BF2582C16100EAE989 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 			children = (
 				76D8D0A825828C2500EAE989 /* SwiftUI_TrafficLightApp.swift */,
 				76D8D0AA25828C2500EAE989 /* ContentView.swift */,
-				76D8D0BF2582C16100EAE989 /* Button.swift */,
+				76D8D0BF2582C16100EAE989 /* ButtonStyle.swift */,
 				76D8D0B825828E1500EAE989 /* ColorCircle.swift */,
 				76D8D0AC25828C2900EAE989 /* Assets.xcassets */,
 				76D8D0B125828C2900EAE989 /* Info.plist */,
@@ -147,7 +147,7 @@
 				76D8D0AB25828C2500EAE989 /* ContentView.swift in Sources */,
 				76D8D0A925828C2500EAE989 /* SwiftUI_TrafficLightApp.swift in Sources */,
 				76D8D0B925828E1900EAE989 /* ColorCircle.swift in Sources */,
-				76D8D0C02582C16100EAE989 /* Button.swift in Sources */,
+				76D8D0C02582C16100EAE989 /* ButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ColorCircle: View {
     let color: UIColor
-    var lightOffOrOn: CGFloat
+    let opacity: Double
 
     var body: some View {
-        Color(color.withAlphaComponent(lightOffOrOn))
+        Color(color)
             .frame(width: 150, height: 150)
             .clipShape(Circle())
+            .opacity(opacity)
             .overlay(Circle().stroke(Color.white, lineWidth: 4))
             .padding()
     }
@@ -22,6 +23,6 @@ struct ColorCircle: View {
 
 struct ColorCircle_Previews: PreviewProvider {
     static var previews: some View {
-        ColorCircle(color: .red, lightOffOrOn: 1 )
+        ColorCircle(color: .red, opacity: 0.3 )
     }
 }

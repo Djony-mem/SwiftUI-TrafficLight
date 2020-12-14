@@ -12,44 +12,24 @@ enum CurrentLight {
 }
 
 struct ContentView: View {
-    @State var text = "start"
+    @State private var text = "start"
     
-    private let lightOn: CGFloat = 1
-    private let lightOff: CGFloat = 0.5
+    @State private var redLightAlpha: Double = 0.5
+    @State private var yellowLightAlpha: Double = 0.5
+    @State private var greenLightAlgha: Double = 0.5
     
-    @State var redLightAlpha: CGFloat = 0.5
-    @State var yellowLightAlpha: CGFloat = 0.5
-    @State var greenLightAlgha: CGFloat = 0.5
+    @State private var currentLight = CurrentLight.red
     
-    @State var currentLight = CurrentLight.red
-    
-    
-    var body: some View {
-        ZStack {
-            Color(.black)
-                .ignoresSafeArea()
-            VStack {
-                ColorCircle(color: .red, lightOffOrOn: redLightAlpha)
-                ColorCircle(color: .yellow, lightOffOrOn: yellowLightAlpha)
-                ColorCircle(color: .green, lightOffOrOn: greenLightAlgha)
-                Spacer()
-                Button(action: { buttonPressed() }) {
-                    ButtonStyle(text: text)
-                }
-            }
-            .padding(.bottom)
-        }
-    }
-    
-    
-    func buttonPressed() {
+    private func buttonPressed() {
+        let lightOn: Double = 1
+        let lightOff: Double = 0.5
         self.text = "next"
         
         switch currentLight {
         case .red:
             print("HI i am heare")
             greenLightAlgha = lightOff
-            redLightAlpha = 1
+            redLightAlpha = lightOn
             currentLight = .yellow
         case .yellow:
             print("yellow Hi")
@@ -70,4 +50,28 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+
+extension ContentView {
+    var body: some View {
+        ZStack {
+            Color(.black)
+                .ignoresSafeArea()
+            
+            VStack {
+                ColorCircle(color: .red, opacity: redLightAlpha)
+                ColorCircle(color: .yellow, opacity: yellowLightAlpha)
+                ColorCircle(color: .green, opacity: greenLightAlgha)
+                
+                Spacer()
+                
+                Button(action: { buttonPressed() }) {
+                    ButtonStyle(text: text)
+                }
+            }
+            .padding(.bottom)
+        }
+    }
+    
 }

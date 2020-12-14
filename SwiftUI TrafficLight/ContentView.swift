@@ -14,9 +14,9 @@ enum CurrentLight {
 struct ContentView: View {
     @State private var text = "start"
     
-    @State private var redLightAlpha: Double = 0.5
-    @State private var yellowLightAlpha: Double = 0.5
-    @State private var greenLightAlgha: Double = 0.5
+    @State private var redLightAlpha = 0.5
+    @State private var yellowLightAlpha = 0.5
+    @State private var greenLightAlgha = 0.5
     
     @State private var currentLight = CurrentLight.red
     
